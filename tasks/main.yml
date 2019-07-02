@@ -1,0 +1,51 @@
+---
+- name: resolve platform specific vars
+  include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+- name: check for install
+  become: yes
+  stat:
+    path: '{{ codeserver_install_dir }}/{{ codeserver_name }}'
+  changed_when: False
+  register: codeserver_binary
+- when: not codeserver_binary.stat.exists
+  block:
+    - name: download
+      become: yes
+      become_user: root
+      get_url:
+        url: '{{ codeserver_url }}'
+        dest: /tmp/{{ codeserver_archive }}
+        checksum: '{{ codeserver_checksum }}'
+        mode: 0644
+    - name: unarchive
+      become: yes
+      unarchive:
+        remote_src: yes
+        src: /tmp/{{ codeserver_archive }}
+        dest: '{{ codeserver_install_dir }}'
+        creates: '{{ codeserver_install_dir }}/{{ codeserver_name }}'
+  always:
+    - name: cleanup
+      become: yes
+      become_user: root
+      file:
+        path: /tmp/{{ codeserver_archive }}
+        state: absent
+- name: link
+  become: yes
+  become_user: root
+  with_items:
+    - code-server
+  file:
+    src: '{{ codeserver_install_dir }}/{{ codeserver_name }}/{{ item }}'
+    dest: '{{ codeserver_install_dir }}/{{ item }}'
+    state: link
+    

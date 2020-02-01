@@ -2,16 +2,23 @@
 # defaults file for codeserver
 codeserver_mirror: https://github.com/cdr/code-server/releases/download
 
-codeserver_ver: '1.1156-vsc1.33.1'
-codeserver_platform: linux-x64
+codeserver_ver: '2.1698'
+codeserver_flavor_ver: 'vsc1.41.1'
 
-codeserver_checksums:
-  '1.1156-vsc1.33.1':
-    # https://github.com/cdr/code-server/releases/download/1.1156-vsc1.33.1/code-server1.1156-vsc1.33.1-darwin-x64.zip
-    darwin-x64: sha256:f895d994774a1183f44635d7850537655a5303b07345baa0e79768d723a993e4
-    # https://github.com/cdr/code-server/releases/download/1.1156-vsc1.33.1/code-server1.1156-vsc1.33.1-linux-x64.tar.gz
-    linux-x64: sha256:4ee768c461e5c58f2ec1eeaafb8174164eb4f1ac617e1a342ccf51c36a073c13
-    # https://github.com/cdr/code-server/releases/download/1.1156-vsc1.33.1/code-server1.1156-vsc1.33.1-musl-x64.tar.gz
-    musl-x64: sha256:169fab3686af945791ae7fb58e1ac61ca4317c53d887d52db1ddb5fc07a8fc5a
+codeserver_os: linux
+codeserver_arch: x86_64
 
 codeserver_install_dir: /usr/local/bin
+
+codeserver_checksums:
+  '2.1698-vsc1.41.1':
+    # https://github.com/cdr/code-server/releases/download/2.1698/code-server2.1698-vsc1.41.1-alpine-arm64.tar.gz
+    alpine-arm64: sha256:c68c257200ce769e75d91e2430f4d54880ef3b26969230ca6414f65bbf5a4409
+    # https://github.com/cdr/code-server/releases/download/2.1698/code-server2.1698-vsc1.41.1-alpine-x86_64.tar.gz
+    alpine-x86_64: sha256:b3c840193ae006e0fd53e55d6e531e3b059ceb8b434b17cdd6fde932840ae9a4
+    # https://github.com/cdr/code-server/releases/download/2.1698/code-server2.1698-vsc1.41.1-darwin-x86_64.zip
+    darwin-x86_64: sha256:a69ecb0330cd19d77490a2a1adbca2134e82160d530f2470820432c2738f1868
+    # https://github.com/cdr/code-server/releases/download/2.1698/code-server2.1698-vsc1.41.1-linux-arm64.tar.gz
+    linux-arm64: sha256:1f00d490b123a50a151602a35ab2a6b1f71ffdcc0d7754e39dba2412401a3ac4
+    # https://github.com/cdr/code-server/releases/download/2.1698/code-server2.1698-vsc1.41.1-linux-x86_64.tar.gz
+    linux-x86_64: sha256:6cb344a9f25da97bb8a59e9a9ce7d116720324e3da5197aad45b8b61e384757d

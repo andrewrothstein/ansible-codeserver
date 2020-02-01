@@ -1,2 +1,2 @@
 ---
-codeserver_platform: musl-x64
+codeserver_os: alpine

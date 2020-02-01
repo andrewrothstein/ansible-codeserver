@@ -1,3 +1,3 @@
 ---
+codeserver_os: darwin
 codeserver_archive_suffix: zip
-codeserver_platform: darwin-x64

@@ -48,4 +48,3 @@
     src: '{{ codeserver_install_dir }}/{{ codeserver_name }}/{{ item }}'
     dest: '{{ codeserver_install_dir }}/{{ item }}'
     state: link
-    

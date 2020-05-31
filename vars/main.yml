@@ -1,8 +1,7 @@
 ---
 # vars file for codeserver
 codeserver_platform: '{{ codeserver_os }}-{{ codeserver_arch }}'
-codeserver_fq_ver: '{{ codeserver_ver }}-{{ codeserver_flavor_ver }}'
-codeserver_name: code-server{{ codeserver_fq_ver }}-{{ codeserver_platform }}
+codeserver_name: code-server-{{ codeserver_ver }}-{{ codeserver_platform }}
 codeserver_archive: '{{ codeserver_name }}.{{ codeserver_archive_suffix | default("tar.gz") }}'
-codeserver_url: '{{ codeserver_mirror }}/{{ codeserver_ver }}/{{ codeserver_archive }}'
-codeserver_checksum: '{{ codeserver_checksums[codeserver_fq_ver][codeserver_platform] }}'
+codeserver_url: '{{ codeserver_mirror }}/v{{ codeserver_ver }}/{{ codeserver_archive }}'
+codeserver_checksum: '{{ codeserver_checksums[codeserver_ver][codeserver_platform] }}'

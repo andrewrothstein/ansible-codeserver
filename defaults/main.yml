@@ -2,8 +2,7 @@
 # defaults file for codeserver
 codeserver_mirror: https://github.com/cdr/code-server/releases/download
 
-codeserver_ver: '2.1698'
-codeserver_flavor_ver: 'vsc1.41.1'
+codeserver_ver: 3.3.1
 
 codeserver_os: linux
 codeserver_arch: x86_64
@@ -11,14 +10,12 @@ codeserver_arch: x86_64
 codeserver_install_dir: /usr/local/bin
 
 codeserver_checksums:
-  '2.1698-vsc1.41.1':
-    # https://github.com/cdr/code-server/releases/download/2.1698/code-server2.1698-vsc1.41.1-alpine-arm64.tar.gz
-    alpine-arm64: sha256:c68c257200ce769e75d91e2430f4d54880ef3b26969230ca6414f65bbf5a4409
-    # https://github.com/cdr/code-server/releases/download/2.1698/code-server2.1698-vsc1.41.1-alpine-x86_64.tar.gz
-    alpine-x86_64: sha256:b3c840193ae006e0fd53e55d6e531e3b059ceb8b434b17cdd6fde932840ae9a4
-    # https://github.com/cdr/code-server/releases/download/2.1698/code-server2.1698-vsc1.41.1-darwin-x86_64.zip
-    darwin-x86_64: sha256:a69ecb0330cd19d77490a2a1adbca2134e82160d530f2470820432c2738f1868
-    # https://github.com/cdr/code-server/releases/download/2.1698/code-server2.1698-vsc1.41.1-linux-arm64.tar.gz
-    linux-arm64: sha256:1f00d490b123a50a151602a35ab2a6b1f71ffdcc0d7754e39dba2412401a3ac4
-    # https://github.com/cdr/code-server/releases/download/2.1698/code-server2.1698-vsc1.41.1-linux-x86_64.tar.gz
-    linux-x86_64: sha256:6cb344a9f25da97bb8a59e9a9ce7d116720324e3da5197aad45b8b61e384757d
+  '3.3.1':
+    # https://github.com/cdr/code-server/releases/download/v3.3.1/code-server-3.3.1-linux-amd64.tar.gz
+    linux-amd64: sha256:57b9855b20f511e22776ee8a53d1ff30f864498814c4c0b0af3510f71d7a2969
+    # https://github.com/cdr/code-server/releases/download/v3.3.1/code-server-3.3.1-linux-arm64.tar.gz
+    linux-arm64: sha256:020d559a2a2cef6aefaa5013f6f6665b5999ce2a4f14fe1dce648de009819da5
+    # https://github.com/cdr/code-server/releases/download/v3.3.1/code-server-3.3.1-linux-x86_64.tar.gz
+    linux-x86_64: sha256:04d994c17045037f7719eed36fc85cecc008b9b19de8a88f8d55bb330cbf4427
+    # https://github.com/cdr/code-server/releases/download/v3.3.1/code-server-3.3.1-macos-amd64.tar.gz
+    macos-amd64: sha256:b72b46476204b69c57df35f765c1e82d1770bc5970e2addfdbb21552e6967199

@@ -12,7 +12,7 @@ dl()
     local suffix=${4:-tar.gz}
     local platform="${os}-${arch}"
     local file="${APPNAME}-${ver}-${platform}.${suffix}"
-    local url=$MIRROR/v$ver/$file
+    local url=$MIRROR/$ver/$file
     local lfile=$DIR/$file
 
     if [ ! -e $lfile ];
@@ -27,10 +27,11 @@ dl()
 dl_ver() {
     local ver=$1
     printf "  '%s':\n" $ver
-    dl $ver $flavor_ver linux amd64
-    dl $ver $flavor_ver linux arm64
-    dl $ver $flavor_ver linux x86_64
-    dl $ver $flavor_ver macos amd64
+    dl $ver darwin x86_64 zip
+    dl $ver linux amd64
+    dl $ver linux arm64
+    dl $ver linux x86_64
+    dl $ver macos amd64
 }
 
-dl_ver 3.3.1
+dl_ver ${1:-3.4.1}

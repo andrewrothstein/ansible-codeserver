@@ -9,15 +9,15 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: check for install
+- name: check for install in {{ codeserver_install_dir }}...
   become: yes
   stat:
-    path: '{{ codeserver_install_dir }}/{{ codeserver_name }}'
+    path: '{{ codeserver_install_dir }}'
   changed_when: False
   register: codeserver_binary
 - when: not codeserver_binary.stat.exists
   block:
-    - name: download
+    - name: downloading {{ codeserver_url }}...
       become: yes
       become_user: root
       get_url:
@@ -25,15 +25,15 @@
         dest: /tmp/{{ codeserver_archive }}
         checksum: '{{ codeserver_checksum }}'
         mode: 0644
-    - name: unarchive
+    - name: unarchiving /tmp/{{ codeserver_archive }}
       become: yes
       unarchive:
         remote_src: yes
         src: /tmp/{{ codeserver_archive }}
-        dest: '{{ codeserver_install_dir }}'
-        creates: '{{ codeserver_install_dir }}/{{ codeserver_name }}'
+        dest: '{{ codeserver_parent_install_dir }}'
+        creates: '{{ codeserver_install_dir }}'
   always:
-    - name: cleanup
+    - name: removing /tmp/{{ codeserver_archive }}...
       become: yes
       become_user: root
       file:
@@ -45,6 +45,6 @@
   with_items:
     - code-server
   file:
-    src: '{{ codeserver_install_dir }}/{{ codeserver_name }}/{{ item }}'
-    dest: '{{ codeserver_install_dir }}/{{ item }}'
+    src: '{{ codeserver_install_dir }}/bin/{{ item }}'
+    dest: '{{ codeserver_parent_install_dir }}/bin/{{ item }}'
     state: link

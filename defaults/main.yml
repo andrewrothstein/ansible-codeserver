@@ -1,6 +1,6 @@
 ---
 # defaults file for codeserver
-codeserver_ver: 3.4.1
+codeserver_ver: 3.9.3
 codeserver_os: linux
 codeserver_arch: amd64
 
@@ -8,14 +8,12 @@ codeserver_parent_install_dir: /usr/local
 
 codeserver_mirror: https://github.com/cdr/code-server/releases/download
 codeserver_checksums:
-  '3.4.1':
-    # https://github.com/cdr/code-server/releases/download/3.4.1/code-server-3.4.1-darwin-x86_64.zip
-    darwin-x86_64: sha256:287005bcaf06925e20c9d24f40ab43c1b2ac6d9cae6124cda24c18f4d4f0bfb8
-    # https://github.com/cdr/code-server/releases/download/3.4.1/code-server-3.4.1-linux-amd64.tar.gz
-    linux-amd64: sha256:afdb89f4dc7201c03cb35d4f8dc1ccb6060bd0da324a6789089de264d3406817
-    # https://github.com/cdr/code-server/releases/download/3.4.1/code-server-3.4.1-linux-arm64.tar.gz
-    linux-arm64: sha256:a4a5660a1fe9ed974828e16b143bfd5dd7b7a286446e5c9a853ca04684cbe98e
-    # https://github.com/cdr/code-server/releases/download/3.4.1/code-server-3.4.1-linux-x86_64.tar.gz
-    linux-x86_64: sha256:957cc7bafb399b4d8c82fcfc9dc0b4e6ce50d095f2636a31320a628ada75d6a8
-    # https://github.com/cdr/code-server/releases/download/3.4.1/code-server-3.4.1-macos-amd64.tar.gz
-    macos-amd64: sha256:259ad4b4918af0682b8db75fdf16d8f7d42c68e7af002c3105709be304a7682e
+  '3.9.3':
+    # https://github.com/cdr/code-server/releases/download/v3.9.3/code-server-3.9.3-macos-amd64.tar.gz
+    macos-amd64: sha256:3f7ac66ae94918a15855992eb0676d76f17e0e7d0046220deabf4331c1470f12
+    # https://github.com/cdr/code-server/releases/download/v3.9.3/code-server-3.9.3-linux-amd64.tar.gz
+    linux-amd64: sha256:eba42eaf868c2144795b1ac54929e3b252ae35403bf8553b3412a5ac4f365a41
+    # https://github.com/cdr/code-server/releases/download/v3.9.3/code-server-3.9.3-linux-arm64.tar.gz
+    linux-arm64: sha256:8a51d32b959af494846ce5b2111c06e3be5eb72bb087ba9bafc021323685e4fa
+    # https://github.com/cdr/code-server/releases/download/v3.9.3/code-server-3.9.3-macos-amd64.tar.gz
+    macos-amd64: sha256:3f7ac66ae94918a15855992eb0676d76f17e0e7d0046220deabf4331c1470f12

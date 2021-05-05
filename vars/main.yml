@@ -3,6 +3,7 @@
 codeserver_platform: '{{ codeserver_os }}-{{ codeserver_arch }}'
 codeserver_name: code-server-{{ codeserver_ver }}-{{ codeserver_platform }}
 codeserver_archive: '{{ codeserver_name }}.{{ codeserver_archive_suffix | default("tar.gz") }}'
-codeserver_url: '{{ codeserver_mirror }}/{{ codeserver_ver }}/{{ codeserver_archive }}'
+codeserver_tmp_archive: /tmp/{{ codeserver_archive }}
+codeserver_url: '{{ codeserver_mirror }}/v{{ codeserver_ver }}/{{ codeserver_archive }}'
 codeserver_checksum: '{{ codeserver_checksums[codeserver_ver][codeserver_platform] }}'
 codeserver_install_dir: '{{ codeserver_parent_install_dir }}/{{ codeserver_name }}'

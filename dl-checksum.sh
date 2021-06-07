@@ -33,4 +33,4 @@ dl_ver() {
     dl $ver macos amd64
 }
 
-dl_ver ${1:-3.9.3}
+dl_ver ${1:-3.10.2}

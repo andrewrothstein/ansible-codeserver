@@ -1,6 +1,6 @@
 ---
 # defaults file for codeserver
-codeserver_ver: 3.10.2
+codeserver_ver: 3.12.0
 codeserver_os: linux
 codeserver_arch: amd64
 
@@ -15,8 +15,6 @@ codeserver_checksums:
     linux-amd64: sha256:eba42eaf868c2144795b1ac54929e3b252ae35403bf8553b3412a5ac4f365a41
     # https://github.com/cdr/code-server/releases/download/v3.9.3/code-server-3.9.3-linux-arm64.tar.gz
     linux-arm64: sha256:8a51d32b959af494846ce5b2111c06e3be5eb72bb087ba9bafc021323685e4fa
-    # https://github.com/cdr/code-server/releases/download/v3.9.3/code-server-3.9.3-macos-amd64.tar.gz
-    macos-amd64: sha256:3f7ac66ae94918a15855992eb0676d76f17e0e7d0046220deabf4331c1470f12
   '3.10.2':
     # https://github.com/cdr/code-server/releases/download/v3.10.2/code-server-3.10.2-macos-amd64.tar.gz
     macos-amd64: sha256:c1b329dfc2b44e87d0f0b84b640d7cbabeba52db9b1986fe88b1e6b42708eef3
@@ -24,5 +22,12 @@ codeserver_checksums:
     linux-amd64: sha256:47154a6b9e61a0313ba499dd5d948613a17841c2f580612f9721c31964622bf5
     # https://github.com/cdr/code-server/releases/download/v3.10.2/code-server-3.10.2-linux-arm64.tar.gz
     linux-arm64: sha256:20897920e90c0901032b4ec49c67e8882056c1e3bac1adfa87343048830361b5
-    # https://github.com/cdr/code-server/releases/download/v3.10.2/code-server-3.10.2-macos-amd64.tar.gz
-    macos-amd64: sha256:c1b329dfc2b44e87d0f0b84b640d7cbabeba52db9b1986fe88b1e6b42708eef3
+  '3.12.0':
+    # https://github.com/cdr/code-server/releases/download/v3.12.0/code-server-3.12.0-macos-amd64.tar.gz
+    macos-amd64: sha256:e0bfb873ea1c7548ef3c832b0315dc44d1fa730e5d42be12a642441dd066e9ec
+    # https://github.com/cdr/code-server/releases/download/v3.12.0/code-server-3.12.0-linux-amd64.tar.gz
+    linux-amd64: sha256:d3ca41a55e36d73d80300702af2687e25d440cff6b613bb58a2c88d9b8a0a38f
+    # https://github.com/cdr/code-server/releases/download/v3.12.0/code-server-3.12.0-linux-arm64.tar.gz
+    linux-arm64: sha256:7aefba0bf5eef64b307e798b501431c73b88ba485b42e226e8294858c91434f7
+    # https://github.com/cdr/code-server/releases/download/v3.12.0/code-server-3.12.0-linux-armv7l.tar.gz
+    linux-armv7l: sha256:e3409e3fd509795f89d9f41bb26255b14637f77346cd8825d38be4c4a6ed2fc5

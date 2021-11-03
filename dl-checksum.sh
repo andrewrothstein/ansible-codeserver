@@ -30,7 +30,7 @@ dl_ver() {
     dl $ver macos amd64
     dl $ver linux amd64
     dl $ver linux arm64
-    dl $ver macos amd64
-}
+    dl $ver linux armv7l
+ }
 
-dl_ver ${1:-3.10.2}
+dl_ver ${1:-3.12.0}

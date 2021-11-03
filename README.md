@@ -1,6 +1,6 @@
 andrewrothstein.codeserver
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-codeserver.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-codeserver)
+![Build Status](https://github.com/andrewrothstein/ansible-codeserver/actions/workflows/build.yml/badge.svg)
 
 [Run VS Code on a remote server.](https://github.com/cdr/code-server)
 

@@ -1,6 +1,6 @@
 ---
 # defaults file for codeserver
-codeserver_ver: 3.12.0
+codeserver_ver: 4.5.1
 codeserver_os: linux
 codeserver_arch: amd64
 
@@ -31,3 +31,12 @@ codeserver_checksums:
     linux-arm64: sha256:7aefba0bf5eef64b307e798b501431c73b88ba485b42e226e8294858c91434f7
     # https://github.com/cdr/code-server/releases/download/v3.12.0/code-server-3.12.0-linux-armv7l.tar.gz
     linux-armv7l: sha256:e3409e3fd509795f89d9f41bb26255b14637f77346cd8825d38be4c4a6ed2fc5
+  '4.5.1':
+    # https://github.com/cdr/code-server/releases/download/v4.5.1/code-server-4.5.1-macos-amd64.tar.gz
+    macos-amd64: sha256:62ebbd0e752258f00f60a88cece5c999e15abb116d18d9808334e76dd4bd5ce9
+    # https://github.com/cdr/code-server/releases/download/v4.5.1/code-server-4.5.1-linux-amd64.tar.gz
+    linux-amd64: sha256:eec34a53d757e8041357ba8d3ffd84080064b14585b5ba53c7829213b9136b5a
+    # https://github.com/cdr/code-server/releases/download/v4.5.1/code-server-4.5.1-linux-arm64.tar.gz
+    linux-arm64: sha256:2028afb9a28286dea13e18ec9e8b65065a9d614a74b80dd8424a688f299059dc
+    # https://github.com/cdr/code-server/releases/download/v4.5.1/code-server-4.5.1-linux-armv7l.tar.gz
+    linux-armv7l: sha256:f260f01e2bafa8c123d30972b355453318263c316ef726ebf732b53896ed0a57

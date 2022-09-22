@@ -1,5 +1,7 @@
 ---
 # vars file for codeserver
+codeserver_os: '{{ codeserver_os_map[ansible_system] }}'
+codeserver_arch: '{{ codeserver_arch_map[ansible_architecture] }}'
 codeserver_platform: '{{ codeserver_os }}-{{ codeserver_arch }}'
 codeserver_name: code-server-{{ codeserver_ver }}-{{ codeserver_platform }}
 codeserver_archive: '{{ codeserver_name }}.{{ codeserver_archive_suffix | default("tar.gz") }}'

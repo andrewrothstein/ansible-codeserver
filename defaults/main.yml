@@ -1,8 +1,12 @@
 ---
 # defaults file for codeserver
 codeserver_ver: 4.5.1
-codeserver_os: linux
-codeserver_arch: amd64
+codeserver_os_map:
+  Linux: linux
+  Darwin: macos
+codeserver_arch_map:
+  aarch64: arm64
+  x86_64: amd64
 
 codeserver_parent_install_dir: /usr/local
 

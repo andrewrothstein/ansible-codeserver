@@ -1,4 +1,6 @@
 ---
+- include_role:
+    name: andrewrothstein.unarchive-deps
 - name: resolve platform specific vars
   include_vars: '{{ item }}'
   with_first_found:
@@ -10,7 +12,7 @@
       paths:
         - '{{ role_path }}/vars'
 - name: check for install in {{ codeserver_install_dir }}...
-  become: yes
+  become: true
   stat:
     path: '{{ codeserver_install_dir }}'
   changed_when: False
@@ -18,7 +20,7 @@
 - when: not codeserver_binary.stat.exists
   block:
     - name: downloading {{ codeserver_url }}...
-      become: yes
+      become: true
       become_user: root
       get_url:
         url: '{{ codeserver_url }}'
@@ -26,21 +28,21 @@
         checksum: '{{ codeserver_checksum }}'
         mode: 0644
     - name: unarchiving {{ codeserver_tmp_archive }}
-      become: yes
+      become: true
       unarchive:
-        remote_src: yes
+        remote_src: true
         src: '{{ codeserver_tmp_archive }}'
         dest: '{{ codeserver_parent_install_dir }}'
         creates: '{{ codeserver_install_dir }}'
   always:
     - name: removing {{ codeserver_tmp_archive }}...
-      become: yes
+      become: true
       become_user: root
       file:
         path: '{{ codeserver_tmp_archive }}'
         state: absent
 - name: link
-  become: yes
+  become: true
   become_user: root
   with_items:
     - code-server

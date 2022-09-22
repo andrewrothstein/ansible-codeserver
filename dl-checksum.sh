@@ -33,4 +33,4 @@ dl_ver() {
     dl $ver linux armv7l
  }
 
-dl_ver ${1:-4.5.1}
+dl_ver ${1:-4.7.0}

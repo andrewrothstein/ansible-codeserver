@@ -41,7 +41,7 @@
       file:
         path: '{{ codeserver_tmp_archive }}'
         state: absent
-- name: link
+- name: linking binaries in {{ codeserver_parent_install_dir }}/bin to binaries in {{ codeserver_install_dir }}/bin
   become: true
   become_user: root
   with_items:
